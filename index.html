@@ -3,104 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z&F Solar & Electrical Solutions</title>
+    <title>Z&F Solar & Electrical Solutions | Powering South Africa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #ffffff; }
-        .feature-card { background: linear-gradient(145deg, #111111, #080808); border: 1px solid #222; transition: 0.3s; }
-        .feature-card:hover { border-color: #fbbf24; transform: translateY(-5px); }
-        .solar-glow { box-shadow: 0 0 50px -12px rgba(251, 191, 36, 0.3); }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        body { font-family: 'Roboto', sans-serif; color: #333; }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1508514171902-5ea0149aa582?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover; background-position: center;
+        }
+        /* WhatsApp Float Styles */
+        .wa-float-container { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+        .wa-main-btn { width: 60px; height: 60px; background-color: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 32px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); cursor: pointer; transition: 0.3s; }
+        .wa-menu { position: absolute; bottom: 70px; right: 0; display: none; flex-direction: column; gap: 10px; width: 200px; }
+        .wa-contact-link { background: white; padding: 10px 15px; border-radius: 10px; color: #333; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; align-items: center; gap: 10px; border-left: 4px solid #25d366; }
+        .wa-float-container:hover .wa-menu { display: flex; }
     </style>
 </head>
-<body>
+<body class="bg-gray-50">
 
-    <header class="border-b border-white/10 py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold tracking-tighter">Z&F <span class="text-yellow-400">SOLUTIONS</span></h1>
-            <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400 uppercase tracking-widest">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#contact" class="text-yellow-400">Contact</a>
+    <div class="bg-blue-900 text-white py-2 text-sm hidden md:block">
+        <div class="container mx-auto px-6 flex justify-between">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-map-marker-alt text-yellow-400 mr-2"></i> Johannesburg & Boksburg</span>
+                <span><i class="fas fa-certificate text-yellow-400 mr-2"></i> Certified CoC Electricians</span>
+            </div>
+            <div class="font-bold">Call Us: 067 260 9827 / 072 480 3656</div>
+        </div>
+    </div>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-900 flex items-center">
+                <i class="fas fa-bolt text-yellow-500 mr-2"></i> Z&F SOLAR
+            </div>
+            <div class="hidden md:flex space-x-8 font-semibold uppercase text-xs tracking-widest">
+                <a href="#about" class="hover:text-blue-700">About Us</a>
+                <a href="#services" class="hover:text-blue-700">Solar Solutions</a>
+                <a href="#projects" class="hover:text-blue-700">Recent Projects</a>
+                <a href="#contact" class="text-blue-900 border-2 border-blue-900 px-4 py-2 rounded hover:bg-blue-900 hover:text-white transition">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section h-[500px] flex items-center text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Quality Solar Power. <span class="text-yellow-400">Zero Hassle.</span></h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">South Africa's trusted choice for 8kW Deye hybrid systems, backup power, and certified electrical maintenance.</p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-yellow-500 text-black px-8 py-3 rounded font-bold hover:bg-yellow-400">Request a Site Visit</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="py-20 lg:py-32">
-        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">Expert Power for <br><span class="text-yellow-400">Modern South Africa.</span></h2>
-                <p class="text-gray-400 text-lg mb-10 max-w-lg">Specializing in high-performance solar installations and certified electrical work in Johannesburg and Boksburg.</p>
-                <div class="flex gap-4">
-                    <a href="#contact" class="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition">Get Started</a>
-                    <a href="#projects" class="border border-white/20 px-8 py-4 rounded-full font-bold hover:bg-white/10 transition">View Gallery</a>
+    <section id="services" class="py-16 bg-white border-b">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12 uppercase">Our Expertise</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-900 text-2xl"><i class="fas fa-home"></i></div>
+                    <h3 class="font-bold mb-2">Residential Solar</h3>
+                    <p class="text-sm text-gray-500">Customized home systems to beat load shedding.</p>
                 </div>
-            </div>
-            <div class="relative">
-                <div class="w-full h-96 bg-yellow-400/10 rounded-3xl overflow-hidden solar-glow flex items-center justify-center border border-yellow-400/20">
-                     <i class="fas fa-solar-panel text-8xl text-yellow-400/40"></i>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-900 text-2xl"><i class="fas fa-building"></i></div>
+                    <h3 class="font-bold mb-2">Commercial</h3>
+                    <p class="text-sm text-gray-500">Keep your business running during power outages.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-[#080808]">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card p-10 rounded-3xl">
-                    <i class="fas fa-plug text-3xl text-yellow-400 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Electrical Repairs</h3>
-                    <p class="text-gray-500">Full residential and commercial wiring, maintenance, and CoC certification.</p>
-                </div>
-                <div class="feature-card p-10 rounded-3xl">
-                    <i class="fas fa-sun text-3xl text-yellow-400 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Solar Systems</h3>
-                    <p class="text-gray-500">Specialized 8kW Deye hybrid inverter setups with LiFePO4 battery integration.</p>
-                </div>
-                <div class="feature-card p-10 rounded-3xl">
-                    <i class="fas fa-shield-alt text-3xl text-yellow-400 mb-6"></i>
-                    <h3 class="text-xl font-bold mb-4">Backup Power</h3>
-                    <p class="text-gray-500">Uninterrupted power solutions designed to beat load shedding permanently.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-20 border-t border-white/10">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20">
-            <div>
-                <h3 class="text-3xl font-bold mb-8">Direct Contact</h3>
-                <div class="space-y-10">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-yellow-400"><i class="fas fa-user"></i></div>
-                        <div>
-                            <h4 class="font-bold text-xl">Farouk Sibda</h4>
-                            <p class="text-gray-400">067 260 9827</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center text-yellow-400"><i class="fas fa-user"></i></div>
-                        <div>
-                            <h4 class="font-bold text-xl">Zaheer</h4>
-                            <p class="text-gray-400">072 480 3656</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <form class="space-y-6">
-                <input type="text" placeholder="Name" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-yellow-400 outline-none">
-                <input type="email" placeholder="Email" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-yellow-400 outline-none">
-                <textarea placeholder="Tell us about your project..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl h-32 focus:border-yellow-400 outline-none"></textarea>
-                <button class="w-full bg-yellow-400 text-black font-bold py-4 rounded-xl hover:bg-yellow-300 transition uppercase tracking-widest">Send Request</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="py-12 border-t border-white/10 text-center text-gray-500 text-sm">
-        <p>© 2026 Z&F Solar & Electrical Solutions | Professional | Reliable | Affordable</p>
-    </footer>
-
-</body>
-</html>
+                <div class="p-6">
+                    <div class="w-16 h
