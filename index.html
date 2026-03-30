@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #0f0f0f; color: #eeeeee; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #0f0f0f; color: #eeeeee; margin: 0; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
         
-        /* FORCE WHATSAPP VISIBILITY */
+        /* ULTIMATE WHATSAPP FLOAT FIX */
         #wa-container { 
             position: fixed !important; 
             bottom: 30px !important; 
             right: 30px !important; 
-            z-index: 2147483647 !important; /* Highest possible z-index */
+            z-index: 9999999 !important; 
             display: flex !important; 
             flex-direction: column !important; 
             align-items: flex-end !important; 
@@ -32,10 +32,9 @@
             background: #1a1a1a; padding: 14px 20px; border-radius: 15px; 
             color: white; font-weight: 600; text-decoration: none; 
             border: 1px solid #333; display: flex; align-items: center; gap: 12px; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: 0.2s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
         .wa-contact:hover { border-color: #25d366; background: #222; transform: translateX(-5px); }
-        .wa-contact i { color: #25d366; font-size: 24px; }
         #wa-container:hover .wa-menu { display: flex !important; }
 
         @keyframes pulse-green {
@@ -53,144 +52,133 @@
                 <div class="w-10 h-10 bg-yellow-400 rounded flex items-center justify-center text-black font-black text-xl">ZF</div>
                 <span class="text-xl font-extrabold tracking-tighter uppercase">Solar <span class="text-yellow-400">&</span> Electrical</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest">
                 <a href="#services" class="hover:text-yellow-400 transition">Services</a>
                 <a href="#gallery" class="hover:text-yellow-400 transition">Gallery</a>
-                <a href="#contact" class="bg-yellow-400 text-black px-5 py-2 rounded-md font-bold">Contact</a>
+                <a href="#references" class="hover:text-yellow-400 transition">References</a>
+                <a href="#contact" class="bg-yellow-400 text-black px-5 py-2 rounded-md font-bold hover:bg-yellow-300">Contact</a>
             </div>
         </div>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1509391366360-fe5bb658589a?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover" alt="Solar background">
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-transparent to-transparent"></div>
+            <img src="https://images.unsplash.com/photo-1509391366360-fe5bb658589a?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover">
         </div>
         <div class="container mx-auto px-6 relative z-10 text-center">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight uppercase tracking-tighter">
-                Master <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Power</span> Solutions
-            </h1>
-            <p class="text-gray-400 text-lg max-w-xl mx-auto mb-10">Johannesburg & Boksburg's experts in Deye installations, electrical maintenance, and system optimization.</p>
-            <a href="#contact" class="inline-block bg-yellow-400 text-black px-12 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition">Request a Site Visit</a>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter">Reliable <span class="text-yellow-400">Power</span></h1>
+            <p class="text-gray-400 text-lg max-w-xl mx-auto mb-10">Johannesburg & Boksburg's experts in Deye installations and electrical compliance.</p>
+            <a href="#contact" class="bg-yellow-400 text-black px-10 py-4 rounded-full font-extrabold uppercase text-sm tracking-widest hover:bg-white transition">Get Your Quote</a>
         </div>
     </section>
 
     <section id="services" class="py-24 bg-[#141414]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase tracking-widest">Our Expertise</h2>
-                <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
+                <h2 class="text-4xl font-black uppercase tracking-widest text-yellow-400">Our Services</h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="glass p-8 rounded-3xl group hover:border-yellow-400/50 transition">
-                    <i class="fas fa-plug-circle-bolt text-3xl text-yellow-400 mb-6 block"></i>
-                    <h3 class="text-xl font-bold mb-3">Electrical Work</h3>
-                    <p class="text-gray-400 text-sm">Certified wiring, DB upgrades, and official CoC certificates for residential properties.</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center border-t-2 border-transparent hover:border-yellow-400 transition">
+                    <i class="fas fa-bolt text-yellow-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-4 uppercase text-sm">Electrical Work</h3>
+                    <p class="text-xs text-gray-400 mb-6 leading-relaxed">Certified wiring and DB board upgrades.</p>
+                    <a href="#contact" class="mt-auto border border-yellow-400 text-yellow-400 px-4 py-2 rounded-lg text-[10px] font-black hover:bg-yellow-400 hover:text-black transition">REQUEST CoC</a>
                 </div>
-                <div class="glass p-8 rounded-3xl group hover:border-yellow-400/50 transition">
-                    <i class="fas fa-solar-panel text-3xl text-yellow-400 mb-6 block"></i>
-                    <h3 class="text-xl font-bold mb-3">Solar Installations</h3>
-                    <p class="text-gray-400 text-sm">Premium 8kW Deye Hybrid installations designed for maximum efficiency and backup.</p>
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center">
+                    <i class="fas fa-solar-panel text-yellow-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-4 uppercase text-sm">Solar Installations</h3>
+                    <p class="text-xs text-gray-400">8kW Deye Hybrid specialist setups.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl group hover:border-yellow-400/50 transition">
-                    <i class="fas fa-microchip text-3xl text-yellow-400 mb-6 block"></i>
-                    <h3 class="text-xl font-bold mb-3">Technical Assistance</h3>
-                    <p class="text-gray-400 text-sm">Optimization of battery cycles and system settings for long-term hardware health.</p>
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center">
+                    <i class="fas fa-microchip text-yellow-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-4 uppercase text-sm">Technical Help</h3>
+                    <p class="text-xs text-gray-400">System optimization & tuning.</p>
                 </div>
-                <div class="glass p-8 rounded-3xl border-yellow-400/20 group hover:border-yellow-400 transition">
-                    <i class="fas fa-hand-sparkles text-3xl text-yellow-400 mb-6 block"></i>
-                    <h3 class="text-xl font-bold mb-3">Solar Maintenance</h3>
-                    <p class="text-gray-400 text-sm">Professional panel cleaning and rigorous system health checks to protect your ROI.</p>
+                <div class="glass p-8 rounded-3xl flex flex-col items-center text-center">
+                    <i class="fas fa-hand-sparkles text-yellow-400 text-3xl mb-4"></i>
+                    <h3 class="font-bold mb-4 uppercase text-sm">Solar Maintenance</h3>
+                    <p class="text-xs text-gray-400">Panel cleaning & health checks.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="gallery" class="py-24 bg-[#0a0a0a]">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase tracking-widest">Project Gallery</h2>
-                <div class="w-24 h-1 bg-yellow-400 mx-auto mt-4"></div>
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black uppercase mb-16 tracking-widest">Project Gallery</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden border border-white/10 aspect-square">
+                    <img src="71902.jpg" onerror="this.src='https://via.placeholder.com/600x600?text=Solar+Project'" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10 aspect-square bg-gray-900 flex items-center justify-center">
+                    <p class="text-gray-600 text-xs uppercase font-bold">Inverter Installation</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-white/10 aspect-square bg-gray-900 flex items-center justify-center">
+                    <p class="text-gray-600 text-xs uppercase font-bold">Panel Cleaning</p>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="group relative overflow-hidden rounded-2xl aspect-square bg-gray-900 border border-white/10">
-                    <img src="71902.jpg" onerror="this.src='https://via.placeholder.com/600x600?text=Solar+Project'" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-80 group-hover:opacity-100">
-                    <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
-                        <h4 class="font-bold">Latest Installation</h4>
-                    </div>
+        </div>
+    </section>
+
+    <section id="references" class="py-24 bg-[#141414]">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black uppercase mb-16 tracking-widest text-yellow-400">Client References</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-left">
+                <div class="glass p-8 rounded-3xl border-l-4 border-yellow-400">
+                    <p class="text-gray-400 italic mb-4">"Professional, tidy, and extremely knowledgeable about Deye inverters."</p>
+                    <p class="font-bold text-xs uppercase text-yellow-400">— S. Moodley, Boksburg</p>
                 </div>
-                <div class="group relative overflow-hidden rounded-2xl aspect-square bg-gray-900 border border-white/10">
-                    <img src="https://via.placeholder.com/600x600?text=Maintenance" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60 group-hover:opacity-100">
-                    <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
-                        <h4 class="font-bold">Panel Cleaning</h4>
-                    </div>
+                <div class="glass p-8 rounded-3xl border-l-4 border-yellow-400">
+                    <p class="text-gray-400 italic mb-4">"Best price we found for a full CoC and backup system installation."</p>
+                    <p class="font-bold text-xs uppercase text-yellow-400">— J. Pretorius, JHB</p>
                 </div>
-                <div class="group relative overflow-hidden rounded-2xl aspect-square bg-gray-900 border border-white/10">
-                    <img src="https://via.placeholder.com/600x600?text=CoC+Electrical" class="w-full h-full object-cover group-hover:scale-110 transition duration-500 opacity-60 group-hover:opacity-100">
-                    <div class="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
-                        <h4 class="font-bold">DB Board Rewire</h4>
-                    </div>
+                <div class="glass p-8 rounded-3xl border-l-4 border-yellow-400">
+                    <p class="text-gray-400 italic mb-4">"Highly recommend for their technical assistance with lithium battery settings."</p>
+                    <p class="font-bold text-xs uppercase text-yellow-400">— A. Naidoo, JHB South</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-24 bg-yellow-400 text-black">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-wrap lg:flex-nowrap gap-16 items-center">
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-6xl font-black mb-8 leading-none uppercase tracking-tighter">Get A<br>Free Quote.</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-6">
-                            <div class="w-14 h-14 bg-black rounded-full flex items-center justify-center text-yellow-400 text-xl"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <p class="text-xs font-bold uppercase opacity-60">Farouk Sibda</p>
-                                <p class="text-2xl font-black tracking-tight">067 260 9827</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-6">
-                            <div class="w-14 h-14 bg-black rounded-full flex items-center justify-center text-yellow-400 text-xl"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <p class="text-xs font-bold uppercase opacity-60">Zaheer</p>
-                                <p class="text-2xl font-black tracking-tight">072 480 3656</p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-6xl font-black leading-none mb-8 uppercase tracking-tighter">Request<br>A Quote.</h2>
+                <div class="space-y-4">
+                    <p class="text-2xl font-black">Farouk: 067 260 9827</p>
+                    <p class="text-2xl font-black">Zaheer: 072 480 3656</p>
                 </div>
-                <div class="w-full lg:w-1/2 bg-black rounded-[2.5rem] p-10 shadow-2xl">
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Full Name" required class="w-full bg-white/10 border border-white/10 p-4 rounded-xl text-white outline-none focus:border-yellow-400 transition">
-                        <select required class="w-full bg-white/10 border border-white/10 p-4 rounded-xl text-white outline-none focus:border-yellow-400">
-                            <option value="" disabled selected>Service Needed...</option>
-                            <option>Solar Installation</option>
-                            <option>Electrical Work</option>
-                            <option>Maintenance & Cleaning</option>
-                            <option>Technical Assistance</option>
-                        </select>
-                        <textarea placeholder="Tell us about your project..." required class="w-full bg-white/10 border border-white/10 p-4 rounded-xl text-white h-24 outline-none focus:border-yellow-400"></textarea>
-                        <button type="submit" class="w-full bg-yellow-400 text-black font-black py-4 rounded-xl uppercase tracking-widest hover:bg-white transition">Request Quote</button>
-                    </form>
-                </div>
+            </div>
+            <div class="bg-black p-10 rounded-[2.5rem] shadow-2xl">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Full Name" required class="w-full bg-white/10 p-4 rounded-xl text-white outline-none">
+                    <select class="w-full bg-white/10 p-4 rounded-xl text-white outline-none">
+                        <option>Solar Installation</option>
+                        <option>Electrical / CoC</option>
+                        <option>Maintenance</option>
+                        <option>Technical Help</option>
+                    </select>
+                    <textarea placeholder="Tell us about your requirements..." class="w-full bg-white/10 p-4 rounded-xl text-white h-24 outline-none"></textarea>
+                    <button class="w-full bg-yellow-400 py-4 rounded-xl font-black uppercase tracking-widest hover:bg-white transition">Send Request</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-600 text-sm border-t border-white/5">
-        <p>© 2026 Z&F SOLAR & ELECTRICAL SOLUTIONS. JHB / BOKSBURG.</p>
+    <footer class="py-12 text-center text-gray-600 text-xs font-bold uppercase tracking-widest">
+        <p>© 2026 Z&F SOLAR & ELECTRICAL SOLUTIONS</p>
     </footer>
 
     <div id="wa-container">
         <div class="wa-menu">
-            <a href="https://wa.me/27724803656?text=Hi%20Zaheer" target="_blank" class="wa-contact">
+            <a href="https://wa.me/27724803656" target="_blank" class="wa-contact">
                 <i class="fab fa-whatsapp"></i> Chat with Zaheer
             </a>
-            <a href="https://wa.me/27672609827?text=Hi%20Farouk" target="_blank" class="wa-contact">
+            <a href="https://wa.me/27672609827" target="_blank" class="wa-contact">
                 <i class="fab fa-whatsapp"></i> Chat with Farouk
             </a>
         </div>
-        <div class="wa-main-btn">
-            <i class="fab fa-whatsapp"></i>
-        </div>
+        <div class="wa-main-btn"><i class="fab fa-whatsapp"></i></div>
     </div>
 
 </body>
