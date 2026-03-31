@@ -21,12 +21,10 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: var(--dark-green); color: var(--mint); margin: 0; }
         .glass { background: rgba(209, 232, 226, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(209, 232, 226, 0.1); }
         
-        /* Custom Slider Styling */
         input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
         input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: var(--teal); border-radius: 4px; }
         input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radius: 50%; background: var(--peach); cursor: pointer; -webkit-appearance: none; margin-top: -7px; box-shadow: 0 0 15px rgba(255, 203, 154, 0.4); }
 
-        /* WhatsApp Floating Button */
         #wa-container { position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 9999999 !important; display: flex !important; flex-direction: column !important; align-items: flex-end !important; }
         .wa-main-btn { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; }
         .wa-menu { margin-bottom: 15px; display: none; flex-direction: column; gap: 10px; width: 200px; }
@@ -46,41 +44,41 @@
             <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
                 <a href="#services" class="hover:text-[#FFCB9A] transition">Services</a>
                 <a href="#calculator" class="hover:text-[#FFCB9A] transition">Sizing</a>
-                <a href="#gallery" class="hover:text-[#FFCB9A] transition">Gallery</a>
+                <a href="#esp" class="hover:text-[#FFCB9A] transition">Grid Status</a>
                 <a href="#contact" class="bg-[#116466] text-[#D1E8E2] px-5 py-2 rounded-md hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+    <section class="relative h-screen flex items-center justify-center text-center px-6">
         <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#116466]/20 to-transparent"></div>
         <div class="container mx-auto relative z-10">
             <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter italic leading-none text-[#D1E8E2]">
-                <span class="text-[#FFCB9A]">Premium</span><br>Energy Flow.
+                <span class="text-[#FFCB9A]">Master</span><br>The Grid.
             </h1>
             <p class="text-[#D9B08C] text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-[0.3em] font-light">
-                Advanced Hybrid Solar Systems & Strategic Electrical Engineering
+                Professional Hybrid Solar & Electrical Engineering Solutions
             </p>
-            <a href="#services" class="border-2 border-[#116466] text-[#D1E8E2] px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-widest hover:bg-[#116466] transition">Explore Technicals</a>
+            <a href="#calculator" class="border-2 border-[#116466] text-[#D1E8E2] px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-widest hover:bg-[#116466] transition">Start ROI Audit</a>
         </div>
     </section>
 
     <section id="services" class="py-24 bg-[#2C3531]">
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-6 text-center">
-            <div class="glass p-10 rounded-[2rem] hover:bg-[#116466]/10 transition-all duration-500 group">
-                <i class="fas fa-bolt text-[#FFCB9A] text-2xl mb-6 group-hover:scale-110 transition"></i>
+            <div class="glass p-10 rounded-[2rem] hover:bg-[#116466]/10 transition-all group">
+                <i class="fas fa-bolt text-[#FFCB9A] text-2xl mb-6"></i>
                 <h3 class="font-black uppercase text-[10px] tracking-[0.2em] mb-8 text-[#D1E8E2]">Electrical & CoC</h3>
-                <a href="#contact" class="inline-block text-[9px] font-black border border-[#FFCB9A] px-5 py-2 rounded text-[#FFCB9A] hover:bg-[#FFCB9A] hover:text-[#2C3531] transition uppercase tracking-widest">Inquire</a>
+                <a href="#contact" class="inline-block text-[9px] font-black border border-[#FFCB9A] px-5 py-2 rounded text-[#FFCB9A] hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Inquire</a>
             </div>
-            <div class="glass p-10 rounded-[2rem] hover:bg-[#116466]/10 group transition-all">
+            <div class="glass p-10 rounded-[2rem] group transition-all">
                 <i class="fas fa-solar-panel text-[#FFCB9A] text-2xl mb-6"></i>
                 <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Hybrid Solar</h3>
             </div>
-            <div class="glass p-10 rounded-[2rem] hover:bg-[#116466]/10 group transition-all">
+            <div class="glass p-10 rounded-[2rem] group transition-all">
                 <i class="fas fa-microchip text-[#FFCB9A] text-2xl mb-6"></i>
-                <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Optimization</h3>
+                <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Inverter Optimization</h3>
             </div>
-            <div class="glass p-10 rounded-[2rem] hover:bg-[#116466]/10 group transition-all">
+            <div class="glass p-10 rounded-[2rem] group transition-all">
                 <i class="fas fa-hand-sparkles text-[#FFCB9A] text-2xl mb-6"></i>
                 <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Maintenance</h3>
             </div>
@@ -91,7 +89,7 @@
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-black uppercase tracking-[0.3em] mb-4 text-[#D1E8E2]">Sizing <span class="text-[#116466]">Engine</span></h2>
-                <p class="text-[#D9B08C] text-[10px] uppercase tracking-widest">Predictive hardware modeling for South African conditions</p>
+                <p class="text-[#D9B08C] text-[10px] uppercase tracking-widest">Predictive hardware modeling based on South African energy tariffs</p>
             </div>
             <div class="max-w-5xl mx-auto glass p-10 rounded-[2.5rem] grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-8">
@@ -110,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#116466] rounded-3xl p-8 text-[#D1E8E2] text-center shadow-2xl relative">
+                <div class="bg-[#116466] rounded-3xl p-8 text-[#D1E8E2] text-center shadow-2xl">
                     <p class="text-[10px] font-black uppercase mb-2 tracking-widest">Potential Monthly Yield</p>
                     <h3 class="text-5xl font-black mb-6 tracking-tighter text-[#FFCB9A]" id="monthly-savings">R1,875</h3>
                     <div class="space-y-3 text-left border-t border-white/10 pt-6">
@@ -119,11 +117,31 @@
                             <span id="suggested-battery" class="text-[#FFCB9A]">5kWh Lithium</span>
                         </div>
                         <div class="flex justify-between text-[10px] font-bold uppercase">
-                            <span>Estimated Gen:</span>
+                            <span>Monthly Gen:</span>
                             <span id="suggested-kwh" class="text-[#FFCB9A]">445 kWh</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="esp" class="py-24 bg-[#2C3531] border-y border-white/5">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl font-black uppercase mb-4 tracking-[0.3em] text-[#D1E8E2]">Live <span class="text-[#116466]">Grid</span></h2>
+            <div class="glass p-10 rounded-[2rem]">
+                <div class="flex flex-col md:flex-row items-center justify-around gap-12">
+                    <div class="text-center">
+                        <div class="text-6xl font-black text-[#FFCB9A] mb-2" id="grid-status">--</div>
+                        <span class="text-[9px] font-bold text-[#D9B08C] uppercase tracking-widest">South Africa National Stage</span>
+                    </div>
+                    <div class="w-full max-w-xs space-y-4">
+                        <input type="text" id="area-id" placeholder="Enter Area ID (ESP)" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl text-sm outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
+                        <button onclick="checkLoadshedding()" class="w-full bg-[#116466] text-[#D1E8E2] font-black py-3 rounded-xl uppercase text-[10px] tracking-widest hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Check Area</button>
+                    </div>
+                </div>
+                <div id="esp-details" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-[10px] font-bold uppercase">
+                    </div>
             </div>
         </div>
     </section>
@@ -133,12 +151,12 @@
             <h2 class="text-6xl font-black mb-8 uppercase tracking-tighter italic leading-none">Let's Talk<br>Power.</h2>
             <div class="bg-[#2C3531] p-10 rounded-[2.5rem] shadow-2xl text-[#D1E8E2]">
                 <form class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" id="fname" placeholder="First Name" required class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
-                        <input type="text" id="sname" placeholder="Surname" required class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
-                    </div>
+                    <input type="text" id="fname" placeholder="Full Name" required class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
                     <input type="tel" id="phone" placeholder="Contact Number" required class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
-                    <textarea id="notes" placeholder="Notes (Max 250 chars)" maxlength="250" rows="3" class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] resize-none text-[#D1E8E2]"></textarea>
+                    <textarea id="notes" placeholder="How can we help?" maxlength="250" rows="3" class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] resize-none text-[#D1E8E2]"></textarea>
+                    
+                    <input type="hidden" id="internal-request-count" value="0">
+
                     <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#116466] text-[#D1E8E2] font-black py-4 rounded-xl uppercase tracking-widest hover:bg-[#FFCB9A] hover:text-[#2C3531] transition flex items-center justify-center gap-2">
                         <i class="fab fa-whatsapp text-lg"></i> Submit via WhatsApp
                     </button>
@@ -146,10 +164,6 @@
             </div>
         </div>
     </section>
-
-    <footer class="py-12 text-center text-[#D9B08C] text-[9px] font-black uppercase tracking-[0.4em]">
-        <p>© 2026 Z&F SOLAR & ELECTRICAL SOLUTIONS | SOUTH AFRICA</p>
-    </footer>
 
     <div id="wa-container">
         <div class="wa-menu">
@@ -160,6 +174,8 @@
     </div>
 
     <script>
+        const apiKey = "YOUR_ESP_API_TOKEN_HERE"; //
+
         function updateSizing() {
             const bill = parseInt(document.getElementById('bill-input').value);
             document.getElementById('bill-label').innerText = 'R' + bill.toLocaleString();
@@ -176,15 +192,46 @@
             document.getElementById('monthly-savings').innerText = 'R' + Math.floor(savings).toLocaleString();
         }
 
+        async function checkLoadshedding() {
+            const areaId = document.getElementById('area-id').value;
+            const statusEl = document.getElementById('grid-status');
+            const detailsEl = document.getElementById('esp-details');
+            
+            if(!areaId) return alert("Please enter an Area ID");
+            statusEl.innerText = "...";
+
+            try {
+                const response = await fetch(`https://developer.sepush.co.za/business/2.0/area?id=${areaId}`, {
+                    headers: { 'token': apiKey }
+                });
+                const data = await response.json();
+                
+                statusEl.innerText = "STAGE " + (data.events[0]?.note.match(/\d+/) || "0");
+                detailsEl.innerHTML = data.events.slice(0, 2).map(e => `
+                    <div class="bg-[#116466]/20 p-4 rounded-xl border border-white/5">
+                        <span class="text-[#D9B08C]">NEXT:</span><br>${e.start} - ${e.end}
+                    </div>
+                `).join('');
+            } catch (err) {
+                statusEl.innerText = "ERROR";
+                console.error("ESP API Failed:", err);
+            }
+        }
+
         function sendToWhatsApp() {
-            const fname = document.getElementById('fname').value;
-            const sname = document.getElementById('sname').value;
+            const name = document.getElementById('fname').value;
             const phone = document.getElementById('phone').value;
             const notes = document.getElementById('notes').value;
-            if(!fname || !phone) { alert("Basic details required."); return; }
-            const msg = `*NEW INQUIRY*%0A*Name:* ${fname} ${sname}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
+            
+            // INTERNAL COUNTER LOGIC
+            let count = parseInt(localStorage.getItem('zf_request_count')) || 0;
+            count++;
+            localStorage.setItem('zf_request_count', count);
+
+            const msg = `*NEW INQUIRY (Request #${count})*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
             window.open(`https://wa.me/27724803656?text=${msg}`, '_blank');
         }
+
         updateSizing();
     </script>
 </body>
