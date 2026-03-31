@@ -29,7 +29,7 @@
             scroll-behavior: smooth;
         }
 
-        /* FIXED WATERMARK LAYER */
+        /* FIXED WATERMARK LAYER - NO TEXT */
         .watermark-layer {
             position: fixed;
             top: 0;
@@ -41,7 +41,6 @@
             overflow: hidden;
         }
 
-        /* Branded Image Watermarks */
         .wm-img { 
             position: absolute; 
             opacity: 0.07; 
@@ -52,7 +51,6 @@
         .wm-2 { top: 40%; left: -10%; width: 500px; transform: rotate(-10deg); } 
         .wm-3 { bottom: 10%; right: 2%; width: 400px; transform: rotate(-5deg); }
 
-        /* Generic Solar Icon Watermarks */
         .wm-icon { 
             position: absolute; 
             color: white; 
@@ -103,9 +101,9 @@
 <body>
 
     <div class="watermark-layer">
-        <img src="image_4985c3.png" class="wm-img wm-1" alt="Inverter">
-        <img src="image_4a6d83.png" class="wm-img wm-2" alt="Panels">
-        <img src="image_4ad6fc.png" class="wm-img wm-3" alt="Layout">
+        <img src="image_4985c3.png" class="wm-img wm-1" alt="">
+        <img src="image_4a6d83.png" class="wm-img wm-2" alt="">
+        <img src="image_4ad6fc.png" class="wm-img wm-3" alt="">
 
         <i class="fas fa-sun wm-icon icon-sun"></i>
         <i class="fas fa-solar-panel wm-icon icon-panel"></i>
@@ -136,7 +134,7 @@
                     <span class="text-[var(--volt-cyan)]">Solar</span> Electrical<br>Power
                 </h1>
                 <p class="text-gray-500 uppercase tracking-[0.4em] text-xs md:text-sm mb-12">Johannesburg & Pretoria Energy Engineering</p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <div class="flex flex-col md:row gap-4 justify-center">
                     <a href="#gallery" class="bg-white/5 border border-white/10 px-10 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[var(--volt-cyan)] hover:text-black transition">View Our Work</a>
                     <a href="#contact" class="bg-[var(--volt-blue)] px-10 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 shadow-xl shadow-blue-500/20 transition">Book Site Visit</a>
                 </div>
@@ -153,15 +151,15 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="gallery-item">
-                        <img src="image_4985c3.png" alt="Inverter">
+                        <img src="image_4985c3.png" alt="">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Backup Solution</p><h4 class="font-bold text-sm uppercase">Hybrid Inverter Handovers</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="image_4a6d83.png" alt="Panels">
+                        <img src="image_4a6d83.png" alt="">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Hybrid Solar</p><h4 class="font-bold text-sm uppercase">High-Yield Panel Arrays</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="image_30f5b8.jpg" alt="Technical Layout">
+                        <img src="image_4ad6fc.png" alt="">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Engineering</p><h4 class="font-bold text-sm uppercase">DB Board Optimization</h4></div></div>
                     </div>
                 </div>
@@ -280,13 +278,11 @@
         function runSizing() {
             const bill = parseInt(document.getElementById('bill-input').value);
             document.getElementById('bill-label').innerText = 'R' + bill.toLocaleString();
-            
             let inv, pan, bat;
             if (bill < 2000) { inv = "3kW Hybrid"; pan = "4-6 Panels"; bat = "2.5kWh"; }
             else if (bill < 4500) { inv = "5kW Hybrid"; pan = "8-10 Panels"; bat = "5kWh"; }
             else if (bill < 8500) { inv = "8kW Hybrid"; pan = "12-16 Panels"; bat = "10kWh"; }
             else { inv = "12kW+ 3-Phase"; pan = "20+ Panels"; bat = "15kWh+"; }
-            
             const savings = bill * 0.75;
             document.getElementById('res-inv').innerText = inv;
             document.getElementById('res-pan').innerText = pan;
