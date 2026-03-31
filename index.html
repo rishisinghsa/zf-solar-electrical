@@ -35,22 +35,24 @@
             border: 1px solid rgba(255, 255, 255, 0.08); 
         }
 
-        /* Gallery Hover Effect */
-        .gallery-item { overflow: hidden; position: relative; border-radius: 1.5rem; }
-        .gallery-item img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
-        .gallery-item:hover img { transform: scale(1.1); }
+        /* Gallery Handling */
+        .gallery-item { overflow: hidden; position: relative; border-radius: 1.5rem; height: 350px; border: 1px solid rgba(255,255,255,0.05); }
+        .gallery-item img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
+        .gallery-item:hover img { transform: scale(1.08); }
         .gallery-overlay { 
-            position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,212,255,0.4), transparent); 
-            opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 20px;
+            position: absolute; inset: 0; background: linear-gradient(to top, rgba(11, 14, 17, 0.9), transparent); 
+            opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 25px;
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
 
+        /* Custom UI Elements */
         input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
-        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8px; background: #333; border-radius: 4px; }
-        input[type=range]::-webkit-slider-thumb { height: 24px; width: 24px; border-radius: 50%; background: var(--volt-cyan); -webkit-appearance: none; margin-top: -8px; cursor: pointer; box-shadow: 0 0 10px var(--volt-cyan); }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8px; background: #222; border-radius: 4px; }
+        input[type=range]::-webkit-slider-thumb { height: 24px; width: 24px; border-radius: 50%; background: var(--volt-cyan); -webkit-appearance: none; margin-top: -8px; cursor: pointer; box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
 
         #wa-widget { position: fixed; bottom: 25px; right: 25px; z-index: 9999; }
-        .wa-main { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 5px 15px rgba(0,0,0,0.4); cursor: pointer; }
+        .wa-main { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 5px 15px rgba(0,0,0,0.4); cursor: pointer; transition: 0.3s; }
+        .wa-main:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
@@ -62,39 +64,216 @@
                 <span class="font-bold uppercase tracking-tighter italic text-sm md:text-base">Solar <span class="text-[var(--volt-cyan)]">&</span> Electrical</span>
             </div>
             <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
-                <a href="#services" class="hover:text-[var(--volt-cyan)]">Services</a>
-                <a href="#gallery" class="hover:text-[var(--volt-cyan)]">Gallery</a>
-                <a href="#calculator" class="hover:text-[var(--volt-cyan)]">Sizing</a>
-                <a href="#contact" class="bg-[var(--volt-blue)] px-4 py-2 rounded text-white hover:bg-[var(--volt-cyan)] transition">Get Quote</a>
+                <a href="#gallery" class="hover:text-[var(--volt-cyan)] transition">Projects</a>
+                <a href="#services" class="hover:text-[var(--volt-cyan)] transition">Expertise</a>
+                <a href="#calculator" class="hover:text-[var(--volt-cyan)] transition">ROI Sizing</a>
+                <a href="#contact" class="bg-[var(--volt-blue)] px-5 py-2 rounded text-white hover:bg-[var(--volt-cyan)] hover:text-black transition">Get Quote</a>
             </div>
         </div>
     </nav>
 
     <section class="min-h-screen flex items-center justify-center pt-20 text-center px-6">
-        <div>
+        <div class="max-w-4xl">
             <h1 class="text-6xl md:text-9xl font-black uppercase italic leading-none mb-4">
-                <span class="text-[var(--volt-cyan)]">Solar &</span> Electrical<br>Power.
+                <span class="text-[var(--volt-cyan)]">Solar</span> Electrical<br>Power
             </h1>
-            <p class="text-gray-400 uppercase tracking-[0.4em] text-xs md:text-sm mb-10">Johannesburg & Pretoria Energy Experts</p>
+            <p class="text-gray-500 uppercase tracking-[0.4em] text-xs md:text-sm mb-12">Johannesburg & Pretoria Energy Engineering</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#gallery" class="border border-[var(--volt-cyan)] text-[var(--volt-cyan)] px-10 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[var(--volt-cyan)] hover:text-black transition inline-block">View Installations</a>
-                <a href="#contact" class="bg-[var(--volt-blue)] px-10 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition inline-block">Lets build your system requirements</a>
+                <a href="#gallery" class="bg-white/5 border border-white/10 px-10 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:bg-[var(--volt-cyan)] hover:text-black transition">View Our Work</a>
+                <a href="#contact" class="bg-[var(--volt-blue)] px-10 py-5 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 shadow-xl shadow-blue-500/20 transition">Book Site Visit</a>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="py-24 bg-white/5">
+    <section id="gallery" class="py-24 bg-white/[0.02]">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black uppercase italic mb-2">Project <span class="text-[var(--volt-cyan)]">Showcase</span></h2>
-                <p class="text-gray-500 text-[10px] uppercase tracking-widest">Recent Hybrid & Electrical Handovers</p>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="text-4xl font-black uppercase italic mb-2">Project <span class="text-[var(--volt-cyan)]">Portfolio</span></h2>
+                    <p class="text-gray-500 text-[10px] uppercase tracking-widest font-bold">Real-world Hybrid & Backup Handovers</p>
+                </div>
+                <a href="#contact" class="text-[10px] font-bold uppercase tracking-widest border-b border-[var(--volt-cyan)] pb-1 hover:text-[var(--volt-cyan)] transition">View More On WhatsApp</a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="gallery-item h-80">
-                    <img src="https://images.unsplash.com/photo-1509391366360-feaffa648dc8?auto=format&fit=crop&q=80&w=800" alt="Solar Installation">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="gallery-item">
+                    <img src="image_218cb8.png" alt="Inverter Installation">
                     <div class="gallery-overlay">
-                        <span class="text-[10px] font-bold uppercase tracking-widest bg-black/60 px-3 py-1 rounded">Deye Hybrid System</span>
+                        <div>
+                            <p class="text-[var(--volt-cyan)] font-black text-xs uppercase mb-1">Backup Solution</p>
+                            <h4 class="font-bold text-sm uppercase">Inverter & Battery Integration</h4>
+                        </div>
                     </div>
                 </div>
-                <div class="gallery-item h-80">
-                    <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&q=80&w=800" alt="Solar
+                <div class="gallery-item">
+                    <img src="image_21fc9a.png" alt="Solar Panels">
+                    <div class="gallery-overlay">
+                        <div>
+                            <p class="text-[var(--volt-cyan)] font-black text-xs uppercase mb-1">Hybrid Solar</p>
+                            <h4 class="font-bold text-sm uppercase">High-Yield Panel Array</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image_30f5b8.jpg" alt="Technical Layout">
+                    <div class="gallery-overlay">
+                        <div>
+                            <p class="text-[var(--volt-cyan)] font-black text-xs uppercase mb-1">Engineering</p>
+                            <h4 class="font-bold text-sm uppercase">Custom DB Optimization</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass p-10 rounded-[2.5rem] border border-white/5 hover:border-[var(--volt-cyan)] transition duration-500">
+                    <i class="fas fa-bolt text-[var(--volt-cyan)] text-3xl mb-8"></i>
+                    <h3 class="font-bold uppercase text-xs tracking-widest mb-4">Electrical & CoC</h3>
+                    <p class="text-[10px] text-gray-500 uppercase leading-relaxed">Certified Wireman sign-offs and legal compliance auditing.</p>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border border-white/5 hover:border-[var(--volt-cyan)] transition duration-500">
+                    <i class="fas fa-solar-panel text-[var(--volt-cyan)] text-3xl mb-8"></i>
+                    <h3 class="font-bold uppercase text-xs tracking-widest mb-4">Hybrid Solar</h3>
+                    <p class="text-[10px] text-gray-500 uppercase leading-relaxed">End-to-end Deye and Sunsynk hybrid power systems.</p>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border border-white/5 hover:border-[var(--volt-cyan)] transition duration-500">
+                    <i class="fas fa-microchip text-[var(--volt-cyan)] text-3xl mb-8"></i>
+                    <h3 class="font-bold uppercase text-xs tracking-widest mb-4">Optimization</h3>
+                    <p class="text-[10px] text-gray-500 uppercase leading-relaxed">Fine-tuning inverter settings for maximum ROI.</p>
+                </div>
+                <div class="glass p-10 rounded-[2.5rem] border border-white/5 hover:border-[var(--volt-cyan)] transition duration-500">
+                    <i class="fas fa-hand-sparkles text-[var(--volt-cyan)] text-3xl mb-8"></i>
+                    <h3 class="font-bold uppercase text-xs tracking-widest mb-4">Maintenance</h3>
+                    <p class="text-[10px] text-gray-500 uppercase leading-relaxed">Professional panel cleaning and thermal health checks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-24 bg-white/[0.02]">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black uppercase italic mb-2">Smart <span class="text-[var(--volt-cyan)]">Sizing</span></h2>
+                <p class="text-gray-500 text-[10px] uppercase tracking-[0.3em]">Estimated ROI based on current Eskom Tariffs</p>
+            </div>
+            <div class="glass p-10 md:p-16 rounded-[3rem] grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-12">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-gray-400 mb-6 tracking-widest">Monthly Eskom Bill: <span class="text-[var(--volt-cyan)] text-3xl ml-2" id="bill-label">R2,500</span></label>
+                        <input type="range" id="bill-input" min="1000" max="15000" step="500" value="2500" oninput="runSizing()">
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-5 bg-white/5 rounded-2xl border border-white/5">
+                            <span class="text-[10px] font-bold uppercase text-gray-500">Suggested Inverter</span>
+                            <span id="res-inv" class="font-black text-[var(--volt-cyan)] uppercase text-sm">5kW Hybrid</span>
+                        </div>
+                        <div class="flex justify-between items-center p-5 bg-white/5 rounded-2xl border border-white/5">
+                            <span class="text-[10px] font-bold uppercase text-gray-500">Solar Array</span>
+                            <span id="res-pan" class="font-black text-[var(--volt-cyan)] uppercase text-sm">8-10 Panels</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[var(--volt-blue)] rounded-[2.5rem] p-12 text-center shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <p class="text-xs font-bold uppercase mb-2 opacity-80">Estimated Monthly Savings</p>
+                        <h3 class="text-6xl font-black text-[var(--volt-cyan)] mb-10 tracking-tighter" id="res-save">R1,875</h3>
+                        <div class="text-left border-t border-white/20 pt-8 space-y-3">
+                            <div class="flex justify-between text-[10px] font-bold uppercase">
+                                <span>Battery Storage:</span>
+                                <span id="res-bat">5kWh Lithium</span>
+                            </div>
+                            <div class="flex justify-between text-[10px] font-bold uppercase text-[var(--volt-cyan)]">
+                                <span>5-Year ROI Projection:</span>
+                                <span id="res-roi">R112,500</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-0 right-0 p-8 opacity-10">
+                        <i class="fas fa-chart-line text-8xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="esp" class="py-24">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <h2 class="text-3xl font-black uppercase italic mb-10">ESP <span class="text-[var(--volt-cyan)]">Live Portal</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="https://web.sepush.co.za/" target="_blank" class="glass p-8 rounded-3xl hover:bg-[var(--volt-cyan)] hover:text-black transition group">
+                    <i class="fas fa-globe text-2xl mb-4 text-[var(--volt-cyan)] group-hover:text-black"></i>
+                    <span class="block text-[10px] font-bold uppercase tracking-widest">Web Status</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.ashwhale.sepush.eskom" target="_blank" class="glass p-8 rounded-3xl hover:bg-[var(--volt-cyan)] hover:text-black transition group">
+                    <i class="fab fa-google-play text-2xl mb-4 text-[var(--volt-cyan)] group-hover:text-black"></i>
+                    <span class="block text-[10px] font-bold uppercase tracking-widest">Android App</span>
+                </a>
+                <a href="https://apps.apple.com/za/app/eskomsepush/id968620229" target="_blank" class="glass p-8 rounded-3xl hover:bg-[var(--volt-cyan)] hover:text-black transition group">
+                    <i class="fab fa-apple text-2xl mb-4 text-[var(--volt-cyan)] group-hover:text-black"></i>
+                    <span class="block text-[10px] font-bold uppercase tracking-widest">iOS App</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-[var(--volt-cyan)] text-[var(--volt-dark)]">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-7xl font-black uppercase italic leading-none mb-8">Ready to<br>Switch?</h2>
+                <p class="font-bold uppercase tracking-widest text-sm">Send your details for a master technical audit.</p>
+            </div>
+            <div class="bg-[var(--volt-dark)] p-10 md:p-12 rounded-[3rem] text-white shadow-2xl">
+                <form class="space-y-6">
+                    <input type="text" id="fname" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] transition">
+                    <input type="tel" id="fphone" placeholder="WhatsApp Number" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] transition">
+                    <textarea id="fnotes" placeholder="Tell us about your home/business power goals..." rows="3" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] resize-none transition"></textarea>
+                    <button type="button" onclick="sendLead()" class="w-full bg-[var(--volt-blue)] py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-black transition shadow-lg">Submit via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-600 text-[9px] font-bold uppercase tracking-[0.5em]">
+        © 2026 Z&F SOLAR & ELECTRICAL SOLUTIONS | JHB | PTA
+    </footer>
+
+    <div id="wa-widget">
+        <a href="https://wa.me/27724803656" target="_blank" class="wa-main"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <script>
+        function runSizing() {
+            const bill = parseInt(document.getElementById('bill-input').value);
+            document.getElementById('bill-label').innerText = 'R' + bill.toLocaleString();
+            
+            let inv, pan, bat;
+            if (bill < 2000) { inv = "3kW Hybrid"; pan = "4-6 Panels"; bat = "2.5kWh"; }
+            else if (bill < 4500) { inv = "5kW Hybrid"; pan = "8-10 Panels"; bat = "5kWh"; }
+            else if (bill < 8500) { inv = "8kW Hybrid"; pan = "12-16 Panels"; bat = "10kWh"; }
+            else { inv = "12kW+ 3-Phase"; pan = "20+ Panels"; bat = "15kWh+"; }
+            
+            const savings = bill * 0.75;
+            document.getElementById('res-inv').innerText = inv;
+            document.getElementById('res-pan').innerText = pan;
+            document.getElementById('res-bat').innerText = bat;
+            document.getElementById('res-save').innerText = 'R' + Math.floor(savings).toLocaleString();
+            document.getElementById('res-roi').innerText = 'R' + Math.floor(savings * 60).toLocaleString();
+        }
+
+        function sendLead() {
+            const name = document.getElementById('fname').value;
+            const phone = document.getElementById('fphone').value;
+            const notes = document.getElementById('fnotes').value;
+            if(!name || !phone) { alert("Please provide contact details."); return; }
+            const msg = `*NEW SOLAR AUDIT*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
+            window.open(`https://wa.me/27724803656?text=${msg}`, '_blank');
+        }
+        runSizing();
+    </script>
+
+</body>
+</html>
