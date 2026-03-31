@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z&F Solar & Electrical | Premium Power Solutions</title>
+    <title>Z&F Solar & Electrical | Master Power Solutions | JHB & Boksburg</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,15 +22,16 @@
         .glass { background: rgba(209, 232, 226, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(209, 232, 226, 0.1); }
         
         input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
-        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: var(--teal); border-radius: 4px; }
-        input[type=range]::-webkit-slider-thumb { height: 20px; width: 20px; border-radius: 50%; background: var(--peach); cursor: pointer; -webkit-appearance: none; margin-top: -7px; box-shadow: 0 0 15px rgba(255, 203, 154, 0.4); }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8px; cursor: pointer; background: var(--teal); border-radius: 4px; }
+        input[type=range]::-webkit-slider-thumb { height: 24px; width: 24px; border-radius: 50%; background: var(--peach); cursor: pointer; -webkit-appearance: none; margin-top: -8px; box-shadow: 0 0 10px rgba(255, 203, 154, 0.5); }
 
         #wa-container { position: fixed !important; bottom: 30px !important; right: 30px !important; z-index: 9999999 !important; display: flex !important; flex-direction: column !important; align-items: flex-end !important; }
-        .wa-main-btn { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); cursor: pointer; }
-        .wa-menu { margin-bottom: 15px; display: none; flex-direction: column; gap: 10px; width: 200px; }
-        .wa-contact { background: var(--teal); padding: 12px 18px; border-radius: 12px; color: white; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px; transition: 0.3s; font-size: 13px; }
+        .wa-main-btn { width: 65px; height: 65px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 35px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); cursor: pointer; animation: pulse-green 2s infinite; }
+        .wa-menu { margin-bottom: 15px; display: none; flex-direction: column; gap: 10px; width: 230px; }
+        .wa-contact { background: var(--teal); padding: 14px 20px; border-radius: 15px; color: white; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 12px; transition: 0.3s; }
         .wa-contact:hover { background: var(--mint); color: var(--dark-green); }
         #wa-container:hover .wa-menu { display: flex !important; }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
     </style>
 </head>
 <body>
@@ -38,49 +39,48 @@
     <nav class="fixed w-full z-50 glass py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-[#116466] rounded-lg flex items-center justify-center text-[#D1E8E2] font-black text-xl">ZF</div>
+                <div class="w-10 h-10 bg-[#116466] rounded flex items-center justify-center text-white font-black text-xl">ZF</div>
                 <span class="text-xl font-extrabold tracking-tighter uppercase">Solar <span class="text-[#FFCB9A]">&</span> Electrical</span>
             </div>
-            <div class="hidden lg:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em]">
-                <a href="#services" class="hover:text-[#FFCB9A] transition">Services</a>
-                <a href="#calculator" class="hover:text-[#FFCB9A] transition">Sizing</a>
-                <a href="#esp" class="hover:text-[#FFCB9A] transition">Grid Status</a>
-                <a href="#contact" class="bg-[#116466] text-[#D1E8E2] px-5 py-2 rounded-md hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Contact</a>
+            <div class="hidden lg:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#services" class="hover:text-[#FFCB9A]">Services</a>
+                <a href="#calculator" class="hover:text-[#FFCB9A]">Sizing Guide</a>
+                <a href="#gallery" class="hover:text-[#FFCB9A]">Gallery</a>
+                <a href="#contact" class="bg-[#116466] text-white px-5 py-2 rounded-md font-bold hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <section class="relative h-screen flex items-center justify-center text-center px-6">
-        <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#116466]/20 to-transparent"></div>
+        <div class="absolute inset-0 z-0 opacity-20 bg-gradient-to-b from-[#116466]/40 to-transparent"></div>
         <div class="container mx-auto relative z-10">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter italic leading-none text-[#D1E8E2]">
-                <span class="text-[#FFCB9A]">Master</span><br>The Grid.
-            </h1>
-            <p class="text-[#D9B08C] text-sm max-w-xl mx-auto mb-10 leading-relaxed uppercase tracking-[0.3em] font-light">
-                Professional Hybrid Solar & Electrical Engineering Solutions
-            </p>
-            <a href="#calculator" class="border-2 border-[#116466] text-[#D1E8E2] px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-widest hover:bg-[#116466] transition">Start ROI Audit</a>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter italic leading-none"><span class="text-[#FFCB9A]">Master Power</span><br>Solutions</h1>
+            <p class="text-[#D9B08C] text-lg max-w-2xl mx-auto mb-10 leading-relaxed uppercase tracking-widest">Professional Hybrid Solar Installations & Certified Electrical Engineering</p>
+            <a href="#services" class="bg-[#116466] text-white px-10 py-4 rounded-full font-black uppercase text-sm tracking-widest hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Explore Our Services</a>
         </div>
     </section>
 
     <section id="services" class="py-24 bg-[#2C3531]">
         <div class="container mx-auto px-6 grid md:grid-cols-4 gap-6 text-center">
-            <div class="glass p-10 rounded-[2rem] hover:bg-[#116466]/10 transition-all group">
-                <i class="fas fa-bolt text-[#FFCB9A] text-2xl mb-6"></i>
-                <h3 class="font-black uppercase text-[10px] tracking-[0.2em] mb-8 text-[#D1E8E2]">Electrical & CoC</h3>
-                <a href="#contact" class="inline-block text-[9px] font-black border border-[#FFCB9A] px-5 py-2 rounded text-[#FFCB9A] hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Inquire</a>
+            <div class="glass p-10 rounded-[2rem] border border-white/5 hover:border-[#FFCB9A]/50 transition-all duration-500 group">
+                <i class="fas fa-bolt text-[#FFCB9A] text-3xl mb-6 group-hover:scale-110 transition"></i>
+                <h3 class="font-black uppercase text-xs tracking-[0.2em] mb-8">Electrical & CoC</h3>
+                <a href="#contact" class="inline-block text-[10px] font-black border-2 border-[#FFCB9A] px-6 py-2 rounded-lg text-[#FFCB9A] hover:bg-[#FFCB9A] hover:text-[#2C3531] transition uppercase tracking-widest">Request CoC</a>
             </div>
-            <div class="glass p-10 rounded-[2rem] group transition-all">
-                <i class="fas fa-solar-panel text-[#FFCB9A] text-2xl mb-6"></i>
-                <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Hybrid Solar</h3>
+            <div class="glass p-10 rounded-[2rem] border border-white/5 hover:border-[#FFCB9A]/50 transition-all group">
+                <i class="fas fa-solar-panel text-[#FFCB9A] text-3xl mb-6"></i>
+                <h3 class="font-black uppercase text-xs tracking-[0.2em] mb-4">Hybrid Solar</h3>
+                <p class="text-[9px] text-[#D9B08C] uppercase font-bold">Turnkey Solutions</p>
             </div>
-            <div class="glass p-10 rounded-[2rem] group transition-all">
-                <i class="fas fa-microchip text-[#FFCB9A] text-2xl mb-6"></i>
-                <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Inverter Optimization</h3>
+            <div class="glass p-10 rounded-[2rem] border border-white/5 hover:border-[#FFCB9A]/50 transition-all group">
+                <i class="fas fa-microchip text-[#FFCB9A] text-3xl mb-6"></i>
+                <h3 class="font-black uppercase text-xs tracking-[0.2em] mb-4">Optimization</h3>
+                <p class="text-[9px] text-[#D9B08C] uppercase font-bold">Inverter Tuning</p>
             </div>
-            <div class="glass p-10 rounded-[2rem] group transition-all">
-                <i class="fas fa-hand-sparkles text-[#FFCB9A] text-2xl mb-6"></i>
-                <h3 class="font-black uppercase text-[10px] tracking-[0.2em] text-[#D1E8E2]">Maintenance</h3>
+            <div class="glass p-10 rounded-[2rem] border border-white/5 hover:border-[#FFCB9A]/50 transition-all group">
+                <i class="fas fa-hand-sparkles text-[#FFCB9A] text-3xl mb-6"></i>
+                <h3 class="font-black uppercase text-xs tracking-[0.2em] mb-4">Maintenance</h3>
+                <p class="text-[9px] text-[#D9B08C] uppercase font-bold">Panel Cleaning</p>
             </div>
         </div>
     </section>
@@ -88,39 +88,40 @@
     <section id="calculator" class="py-24 bg-[#1e2522]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-black uppercase tracking-[0.3em] mb-4 text-[#D1E8E2]">Sizing <span class="text-[#116466]">Engine</span></h2>
-                <p class="text-[#D9B08C] text-[10px] uppercase tracking-widest">Predictive hardware modeling based on South African energy tariffs</p>
+                <h2 class="text-4xl font-black uppercase tracking-widest mb-4">Smart <span class="text-[#FFCB9A]">Sizing</span></h2>
+                <p class="text-[#D9B08C] text-sm uppercase italic">Hardware & ROI estimates based on average SA sunlight hours</p>
             </div>
-            <div class="max-w-5xl mx-auto glass p-10 rounded-[2.5rem] grid md:grid-cols-2 gap-12 items-center">
+            <div class="max-w-5xl mx-auto glass p-10 rounded-[2.5rem] grid md:grid-cols-2 gap-12 items-center border border-white/5">
                 <div class="space-y-8">
                     <div>
-                        <label class="block text-[10px] font-bold uppercase mb-6 text-[#D9B08C] tracking-widest">Monthly Bill: <span class="text-[#FFCB9A] text-lg" id="bill-label">R2,500</span></label>
+                        <label class="block text-xs font-bold uppercase mb-6 text-[#D9B08C] tracking-widest">Monthly Eskom Bill: <span class="text-[#FFCB9A] text-xl" id="bill-label">R2,500</span></label>
                         <input type="range" id="bill-input" min="1000" max="15000" step="500" value="2500" class="w-full" oninput="updateSizing()">
                     </div>
                     <div class="grid grid-cols-1 gap-4">
-                        <div class="p-4 bg-white/5 rounded-xl flex justify-between items-center border border-white/5">
-                            <span class="text-[9px] uppercase font-bold text-[#D9B08C]">Inverter Suggestion</span>
-                            <span class="font-black text-[#FFCB9A] uppercase text-xs" id="suggested-inverter">5kW Hybrid</span>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10 flex justify-between items-center">
+                            <span class="text-[10px] uppercase font-bold text-[#D9B08C]">Suggested Inverter</span>
+                            <span class="font-black text-[#FFCB9A] uppercase" id="suggested-inverter">5kW Hybrid</span>
                         </div>
-                        <div class="p-4 bg-white/5 rounded-xl flex justify-between items-center border border-white/5">
-                            <span class="text-[9px] uppercase font-bold text-[#D9B08C]">PV Array</span>
-                            <span class="font-black text-[#FFCB9A] text-xs" id="suggested-panels">8-10 Panels</span>
+                        <div class="p-4 bg-white/5 rounded-2xl border border-white/10 flex justify-between items-center">
+                            <span class="text-[10px] uppercase font-bold text-[#D9B08C]">Solar Array</span>
+                            <span class="font-black text-[#FFCB9A]" id="suggested-panels">8-10 Panels</span>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#116466] rounded-3xl p-8 text-[#D1E8E2] text-center shadow-2xl">
-                    <p class="text-[10px] font-black uppercase mb-2 tracking-widest">Potential Monthly Yield</p>
+                <div class="bg-[#116466] rounded-3xl p-8 text-white text-center shadow-2xl relative">
+                    <p class="text-xs font-black uppercase mb-2">Estimated Monthly Savings</p>
                     <h3 class="text-5xl font-black mb-6 tracking-tighter text-[#FFCB9A]" id="monthly-savings">R1,875</h3>
                     <div class="space-y-3 text-left border-t border-white/10 pt-6">
-                        <div class="flex justify-between text-[10px] font-bold uppercase">
-                            <span>Battery Spec:</span>
-                            <span id="suggested-battery" class="text-[#FFCB9A]">5kWh Lithium</span>
+                        <div class="flex justify-between text-[11px] font-black uppercase">
+                            <span>Battery Storage:</span>
+                            <span id="suggested-battery">5kWh Lithium</span>
                         </div>
-                        <div class="flex justify-between text-[10px] font-bold uppercase">
-                            <span>Monthly Gen:</span>
-                            <span id="suggested-kwh" class="text-[#FFCB9A]">445 kWh</span>
+                        <div class="flex justify-between text-[11px] font-black uppercase text-[#FFCB9A]">
+                            <span>5-Year ROI Total:</span>
+                            <span id="five-year-roi">R112,500</span>
                         </div>
                     </div>
+                    <a href="#contact" class="block mt-8 bg-[#FFCB9A] text-[#2C3531] py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:scale-105 transition">Get Custom Quote</a>
                 </div>
             </div>
         </div>
@@ -128,36 +129,37 @@
 
     <section id="esp" class="py-24 bg-[#2C3531] border-y border-white/5">
         <div class="container mx-auto px-6 text-center max-w-4xl">
-            <h2 class="text-3xl font-black uppercase mb-4 tracking-[0.3em] text-[#D1E8E2]">Live <span class="text-[#116466]">Grid</span></h2>
-            <div class="glass p-10 rounded-[2rem]">
-                <div class="flex flex-col md:flex-row items-center justify-around gap-12">
-                    <div class="text-center">
-                        <div class="text-6xl font-black text-[#FFCB9A] mb-2" id="grid-status">--</div>
-                        <span class="text-[9px] font-bold text-[#D9B08C] uppercase tracking-widest">South Africa National Stage</span>
-                    </div>
-                    <div class="w-full max-w-xs space-y-4">
-                        <input type="text" id="area-id" placeholder="Enter Area ID (ESP)" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl text-sm outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
-                        <button onclick="checkLoadshedding()" class="w-full bg-[#116466] text-[#D1E8E2] font-black py-3 rounded-xl uppercase text-[10px] tracking-widest hover:bg-[#FFCB9A] hover:text-[#2C3531] transition">Check Area</button>
-                    </div>
+            <h2 class="text-4xl font-black uppercase mb-4 tracking-widest">Loadshedding <span class="text-[#FFCB9A]">Live</span></h2>
+            <div class="glass p-12 rounded-[2rem] border border-[#116466]/40">
+                <p class="text-[#D9B08C] text-xs uppercase tracking-[0.2em] mb-10 font-bold">Stay updated via the official Eskom SePush portal</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="https://web.sepush.co.za/" target="_blank" class="bg-[#116466] p-6 rounded-2xl border border-white/10 hover:bg-[#FFCB9A] hover:text-[#2C3531] transition group">
+                        <i class="fas fa-globe text-2xl mb-4 text-[#FFCB9A] group-hover:text-[#2C3531]"></i>
+                        <span class="block text-[10px] font-black uppercase tracking-widest">Web Portal</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ashwhale.sepush.eskom" target="_blank" class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-[#FFCB9A] transition">
+                        <i class="fab fa-google-play text-2xl mb-4 text-[#FFCB9A]"></i>
+                        <span class="block text-[10px] font-black uppercase tracking-widest">Android App</span>
+                    </a>
+                    <a href="https://apps.apple.com/za/app/eskomsepush/id968620229" target="_blank" class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:border-[#FFCB9A] transition">
+                        <i class="fab fa-apple text-2xl mb-4 text-[#FFCB9A]"></i>
+                        <span class="block text-[10px] font-black uppercase tracking-widest">iOS App</span>
+                    </a>
                 </div>
-                <div id="esp-details" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 text-left text-[10px] font-bold uppercase">
-                    </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-[#D1E8E2] text-[#2C3531]">
+    <section id="contact" class="py-24 bg-[#FFCB9A] text-[#2C3531]">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <h2 class="text-6xl font-black mb-8 uppercase tracking-tighter italic leading-none">Let's Talk<br>Power.</h2>
-            <div class="bg-[#2C3531] p-10 rounded-[2.5rem] shadow-2xl text-[#D1E8E2]">
+            <div class="bg-[#2C3531] p-10 rounded-[2.5rem] shadow-2xl text-white">
                 <form class="space-y-4">
-                    <input type="text" id="fname" placeholder="Full Name" required class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
-                    <input type="tel" id="phone" placeholder="Contact Number" required class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] text-[#D1E8E2]">
-                    <textarea id="notes" placeholder="How can we help?" maxlength="250" rows="3" class="w-full bg-[#116466]/20 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] resize-none text-[#D1E8E2]"></textarea>
-                    
-                    <input type="hidden" id="internal-request-count" value="0">
-
-                    <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#116466] text-[#D1E8E2] font-black py-4 rounded-xl uppercase tracking-widest hover:bg-[#FFCB9A] hover:text-[#2C3531] transition flex items-center justify-center gap-2">
+                    <input type="text" id="fname" placeholder="Full Name" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A]">
+                    <input type="tel" id="phone" placeholder="Contact Number" required class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A]">
+                    <textarea id="notes" placeholder="Notes (How can we help?)" maxlength="250" rows="3" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl outline-none focus:border-[#FFCB9A] resize-none"></textarea>
+                    <button type="button" onclick="sendToWhatsApp()" class="w-full bg-[#116466] text-white font-black py-4 rounded-xl uppercase tracking-widest hover:bg-white hover:text-black transition flex items-center justify-center gap-2">
                         <i class="fab fa-whatsapp text-lg"></i> Submit via WhatsApp
                     </button>
                 </form>
@@ -174,64 +176,29 @@
     </div>
 
     <script>
-        const apiKey = "YOUR_ESP_API_TOKEN_HERE"; //
-
         function updateSizing() {
             const bill = parseInt(document.getElementById('bill-input').value);
             document.getElementById('bill-label').innerText = 'R' + bill.toLocaleString();
-            let inv, pan, bat, kwhNum;
-            if (bill < 2000) { inv = "3kW Hybrid"; pan = "4-6 Panels"; bat = "2.5kWh"; kwhNum = 4 * 545 * 4.8 * 30 * 0.78 / 1000; }
-            else if (bill < 4500) { inv = "5kW Hybrid"; pan = "8-10 Panels"; bat = "5kWh"; kwhNum = 8 * 545 * 4.8 * 30 * 0.78 / 1000; }
-            else if (bill < 8500) { inv = "8kW Hybrid"; pan = "12-16 Panels"; bat = "10kWh"; kwhNum = 12 * 545 * 4.8 * 30 * 0.78 / 1000; }
-            else { inv = "12kW+ 3-Phase"; pan = "20+ Panels"; bat = "15kWh+"; kwhNum = 20 * 545 * 4.8 * 30 * 0.78 / 1000; }
+            let inv, pan, bat;
+            if (bill < 2000) { inv = "3kW Hybrid"; pan = "4-6 Panels"; bat = "2.5kWh"; }
+            else if (bill < 4500) { inv = "5kW Hybrid"; pan = "8-10 Panels"; bat = "5kWh"; }
+            else if (bill < 8500) { inv = "8kW Hybrid"; pan = "12-16 Panels"; bat = "10kWh"; }
+            else { inv = "12kW+ 3-Phase"; pan = "20+ Panels"; bat = "15kWh+"; }
             const savings = bill * 0.75;
             document.getElementById('suggested-inverter').innerText = inv;
             document.getElementById('suggested-panels').innerText = pan;
             document.getElementById('suggested-battery').innerText = bat;
-            document.getElementById('suggested-kwh').innerText = Math.floor(kwhNum) + ' kWh';
             document.getElementById('monthly-savings').innerText = 'R' + Math.floor(savings).toLocaleString();
-        }
-
-        async function checkLoadshedding() {
-            const areaId = document.getElementById('area-id').value;
-            const statusEl = document.getElementById('grid-status');
-            const detailsEl = document.getElementById('esp-details');
-            
-            if(!areaId) return alert("Please enter an Area ID");
-            statusEl.innerText = "...";
-
-            try {
-                const response = await fetch(`https://developer.sepush.co.za/business/2.0/area?id=${areaId}`, {
-                    headers: { 'token': apiKey }
-                });
-                const data = await response.json();
-                
-                statusEl.innerText = "STAGE " + (data.events[0]?.note.match(/\d+/) || "0");
-                detailsEl.innerHTML = data.events.slice(0, 2).map(e => `
-                    <div class="bg-[#116466]/20 p-4 rounded-xl border border-white/5">
-                        <span class="text-[#D9B08C]">NEXT:</span><br>${e.start} - ${e.end}
-                    </div>
-                `).join('');
-            } catch (err) {
-                statusEl.innerText = "ERROR";
-                console.error("ESP API Failed:", err);
-            }
+            document.getElementById('five-year-roi').innerText = 'R' + Math.floor(savings * 60).toLocaleString();
         }
 
         function sendToWhatsApp() {
             const name = document.getElementById('fname').value;
             const phone = document.getElementById('phone').value;
             const notes = document.getElementById('notes').value;
-            
-            // INTERNAL COUNTER LOGIC
-            let count = parseInt(localStorage.getItem('zf_request_count')) || 0;
-            count++;
-            localStorage.setItem('zf_request_count', count);
-
-            const msg = `*NEW INQUIRY (Request #${count})*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
+            const msg = `*NEW SOLAR INQUIRY*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
             window.open(`https://wa.me/27724803656?text=${msg}`, '_blank');
         }
-
         updateSizing();
     </script>
 </body>
