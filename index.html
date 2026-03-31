@@ -29,8 +29,8 @@
             scroll-behavior: smooth;
         }
 
-        /* WATERMARK BACKGROUND LAYER */
-        .watermark-bg {
+        /* ACTUAL IMAGE WATERMARK LAYER */
+        .watermark-layer {
             position: fixed;
             top: 0;
             left: 0;
@@ -38,15 +38,20 @@
             height: 100%;
             z-index: -1;
             pointer-events: none;
-            opacity: 0.04; /* Ultra-subtle engineering aesthetic */
-            filter: grayscale(100%) contrast(120%);
+            overflow: hidden;
         }
 
-        .wm-icon { position: absolute; font-size: 20rem; transform: rotate(-15deg); }
-        .wm-sun { top: -5%; right: -5%; font-size: 30rem; }
-        .wm-panel { top: 30%; left: -5%; transform: rotate(10deg); }
-        .wm-battery { bottom: 10%; right: 5%; transform: rotate(-20deg); }
-        .wm-inverter { top: 60%; right: -10%; transform: rotate(15deg); }
+        .wm-img { 
+            position: absolute; 
+            opacity: 0.05; /* Adjust this for visibility */
+            filter: grayscale(100%); 
+            max-width: 400px;
+        }
+
+        /* Placement of your specific images as watermarks */
+        .wm-1 { top: -5%; right: -5%; width: 500px; transform: rotate(15deg); } /* Sun/Inverter area */
+        .wm-2 { top: 35%; left: -10%; width: 450px; transform: rotate(-10deg); } /* Panel area */
+        .wm-3 { bottom: 5%; right: -5%; width: 400px; transform: rotate(-15deg); } /* Battery area */
 
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
@@ -76,11 +81,10 @@
 </head>
 <body>
 
-    <div class="watermark-bg">
-        <i class="fas fa-sun wm-icon wm-sun"></i>
-        <i class="fas fa-solar-panel wm-icon wm-panel"></i>
-        <i class="fas fa-car-battery wm-icon wm-battery"></i>
-        <i class="fas fa-microchip wm-icon wm-inverter"></i>
+    <div class="watermark-layer">
+        <img src="image_4985c3.png" class="wm-img wm-1" alt="Watermark Inverter">
+        <img src="image_21fc9a.png" class="wm-img wm-2" alt="Watermark Panels">
+        <img src="image_30f5b8.jpg" class="wm-img wm-3" alt="Watermark Engineering">
     </div>
 
     <nav class="fixed w-full z-50 glass py-4">
