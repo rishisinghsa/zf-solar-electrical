@@ -29,7 +29,7 @@
             scroll-behavior: smooth;
         }
 
-        /* FIXED WATERMARK LAYER */
+        /* COMPREHENSIVE WATERMARK LAYER */
         .watermark-layer {
             position: fixed;
             top: 0;
@@ -41,19 +41,35 @@
             overflow: hidden;
         }
 
+        /* Branded Image Watermarks */
         .wm-img { 
             position: absolute; 
-            opacity: 0.1; /* Set to 0.1 for visibility test - adjust to 0.05 later */
+            opacity: 0.07; 
             filter: grayscale(100%) brightness(1.2); 
             pointer-events: none;
         }
-
-        /* Watermark Placements */
         .wm-1 { top: 2%; right: -5%; width: 450px; transform: rotate(15deg); } 
         .wm-2 { top: 40%; left: -10%; width: 500px; transform: rotate(-10deg); } 
         .wm-3 { bottom: 10%; right: 2%; width: 400px; transform: rotate(-5deg); }
 
-        /* Main Wrapper ensures content stays above watermarks */
+        /* Generic Solar Icon Watermarks */
+        .wm-icon { 
+            position: absolute; 
+            color: white; 
+            opacity: 0.03; 
+            font-size: 150px; 
+            animation: float 20s infinite alternate ease-in-out;
+        }
+        .icon-sun { top: 10%; left: 5%; animation-delay: 0s; }
+        .icon-panel { top: 70%; right: 15%; font-size: 200px; animation-delay: -5s; }
+        .icon-battery { top: 25%; left: 45%; font-size: 120px; animation-delay: -2s; }
+        .icon-inverter { bottom: 5%; left: 10%; font-size: 180px; animation-delay: -8s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(30px) rotate(5deg); }
+        }
+
         .main-content {
             position: relative;
             z-index: 10;
@@ -66,7 +82,6 @@
             border: 1px solid rgba(255, 255, 255, 0.08); 
         }
 
-        /* Gallery */
         .gallery-item { overflow: hidden; position: relative; border-radius: 1.5rem; height: 350px; border: 1px solid rgba(255,255,255,0.05); }
         .gallery-item img { transition: transform 0.6s ease; width: 100%; height: 100%; object-fit: cover; }
         .gallery-item:hover img { transform: scale(1.08); }
@@ -76,7 +91,6 @@
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
 
-        /* Range Slider */
         input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
         input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8px; background: #222; border-radius: 4px; }
         input[type=range]::-webkit-slider-thumb { height: 24px; width: 24px; border-radius: 50%; background: var(--volt-cyan); -webkit-appearance: none; margin-top: -8px; cursor: pointer; box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
@@ -89,9 +103,14 @@
 <body>
 
     <div class="watermark-layer">
-        <img src="image_4985c3.png" class="wm-img wm-1" alt="Watermark Inverter">
-        <img src="image_21fc9a.png" class="wm-img wm-2" alt="Watermark Panels">
-        <img src="image_30f5b8.jpg" class="wm-img wm-3" alt="Watermark Engineering">
+        <img src="image_4985c3.png" class="wm-img wm-1" alt="Inverter">
+        <img src="image_4a6d83.png" class="wm-img wm-2" alt="Panels">
+        <img src="image_4ad6fc.png" class="wm-img wm-3" alt="Technical">
+
+        <i class="fas fa-sun wm-icon icon-sun"></i>
+        <i class="fas fa-solar-panel wm-icon icon-panel"></i>
+        <i class="fas fa-car-battery wm-icon icon-battery"></i>
+        <i class="fas fa-microchip wm-icon icon-inverter"></i>
     </div>
 
     <div class="main-content">
@@ -126,7 +145,7 @@
 
         <section id="gallery" class="py-24 bg-transparent">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div class="flex flex-col md:row justify-between items-end mb-16 gap-6">
                     <div>
                         <h2 class="text-4xl font-black uppercase italic mb-2">Project <span class="text-[var(--volt-cyan)]">Portfolio</span></h2>
                         <p class="text-gray-500 text-[10px] uppercase tracking-widest font-bold">Real-world Hybrid & Backup Handovers</p>
@@ -138,11 +157,11 @@
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Backup Solution</p><h4 class="font-bold text-sm uppercase">Hybrid Inverter Handovers</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="image_21fc9a.png" alt="Panels">
+                        <img src="image_4a6d83.png" alt="Panels">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Hybrid Solar</p><h4 class="font-bold text-sm uppercase">High-Yield Panel Arrays</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="image_30f5b8.jpg" alt="Technical">
+                        <img src="image_4ad6fc.png" alt="Technical">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Engineering</p><h4 class="font-bold text-sm uppercase">DB Board Optimization</h4></div></div>
                     </div>
                 </div>
