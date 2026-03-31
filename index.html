@@ -29,6 +29,25 @@
             scroll-behavior: smooth;
         }
 
+        /* WATERMARK BACKGROUND LAYER */
+        .watermark-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.04; /* Ultra-subtle engineering aesthetic */
+            filter: grayscale(100%) contrast(120%);
+        }
+
+        .wm-icon { position: absolute; font-size: 20rem; transform: rotate(-15deg); }
+        .wm-sun { top: -5%; right: -5%; font-size: 30rem; }
+        .wm-panel { top: 30%; left: -5%; transform: rotate(10deg); }
+        .wm-battery { bottom: 10%; right: 5%; transform: rotate(-20deg); }
+        .wm-inverter { top: 60%; right: -10%; transform: rotate(15deg); }
+
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
             backdrop-filter: blur(12px); 
@@ -56,6 +75,13 @@
     </style>
 </head>
 <body>
+
+    <div class="watermark-bg">
+        <i class="fas fa-sun wm-icon wm-sun"></i>
+        <i class="fas fa-solar-panel wm-icon wm-panel"></i>
+        <i class="fas fa-car-battery wm-icon wm-battery"></i>
+        <i class="fas fa-microchip wm-icon wm-inverter"></i>
+    </div>
 
     <nav class="fixed w-full z-50 glass py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
