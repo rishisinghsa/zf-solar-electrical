@@ -84,9 +84,25 @@
         .gallery-item:hover img { transform: scale(1.08); }
         .gallery-overlay { 
             position: absolute; inset: 0; background: linear-gradient(to top, rgba(11, 14, 17, 0.9), transparent); 
-            opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; padding: 25px; text-align: center;
+            opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 25px;
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* SPECIAL MOBILE BEFORE/AFTER FIX FOR PROJECT 5 ONLY */
+        @media (max-width: 768px) {
+            .mobile-before-after {
+                overflow-x: scroll; /* Allow horizontal scrolling */
+                scroll-snap-type: x mandatory; /* Force snapping to edges */
+                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            }
+            .mobile-before-after img {
+                width: 200% !important; /* Make image 2x wider than screen */
+                max-width: none !important;
+                scroll-snap-align: start; /* Snap to the start or end */
+                object-fit: contain !important; /* Keep proportions */
+                transform: none !important; /* Disable zoom effect */
+            }
+        }
 
         input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
         input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8px; background: #222; border-radius: 4px; }
@@ -188,12 +204,12 @@
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Electrical</p><h4 class="font-bold text-sm uppercase">System Integration</h4></div></div>
                     </div>
 
-                    <div class="lg:col-start-2 gallery-item lg:col-span-1 md:col-span-1">
+                    <div class="gallery-item lg:col-span-3 mobile-before-after">
                         <img src="Project 5.jpg" alt="DB Board Optimization">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Optimization</p><h4 class="font-bold text-sm uppercase">DB Board Upgrade</h4></div></div>
                     </div>
                     
-                    <div class="gallery-item lg:col-span-1 md:col-span-1">
+                    <div class="gallery-item">
                         <img src="Project 6.jpg" alt="Solar Panel Cleaning">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Maintenance</p><h4 class="font-bold text-sm uppercase">Panels Maintenance</h4></div></div>
                     </div>
