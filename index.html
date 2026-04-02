@@ -84,7 +84,7 @@
         .gallery-item:hover img { transform: scale(1.08); }
         .gallery-overlay { 
             position: absolute; inset: 0; background: linear-gradient(to top, rgba(11, 14, 17, 0.9), transparent); 
-            opacity: 0; transition: opacity 0.3s; display: flex; align-items: flex-end; padding: 25px;
+            opacity: 0; transition: opacity 0.3s; display: flex; align-items: center; justify-content: center; padding: 25px; text-align: center;
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
 
@@ -140,7 +140,7 @@
                     <div class="glass p-10 rounded-[2.5rem] hover:border-[var(--volt-cyan)] transition duration-500">
                         <i class="fas fa-bolt text-[var(--volt-cyan)] text-3xl mb-8"></i>
                         <h3 class="font-bold uppercase text-xs tracking-widest mb-4">Electrical & CoC</h3>
-                        <p class="text-[10px] text-gray-500 uppercase leading-relaxed">Certified and legal compliance.</p>
+                        <p class="text-[10px] text-gray-500 uppercase leading-relaxed">Certified and legal compliance auditing.</p>
                     </div>
                     <div class="glass p-10 rounded-[2.5rem] hover:border-[var(--volt-cyan)] transition duration-500">
                         <i class="fas fa-solar-panel text-[var(--volt-cyan)] text-3xl mb-8"></i>
@@ -188,9 +188,14 @@
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Electrical</p><h4 class="font-bold text-sm uppercase">System Integration</h4></div></div>
                     </div>
 
-                    <div class="gallery-item lg:col-span-3 lg:col-start-1 lg:translate-x-[16.66%] md:col-span-2">
+                    <div class="lg:col-start-2 gallery-item lg:col-span-1 md:col-span-1">
                         <img src="Project 5.jpg" alt="DB Board Optimization">
-                        <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">DB Optimization</p><h4 class="font-bold text-sm uppercase">Full DB Board Optimization & Solar Integration</h4></div></div>
+                        <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Optimization</p><h4 class="font-bold text-sm uppercase">DB Board Upgrade</h4></div></div>
+                    </div>
+                    
+                    <div class="gallery-item lg:col-span-1 md:col-span-1">
+                        <img src="Project 6.jpg" alt="Solar Panel Cleaning">
+                        <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Maintenance</p><h4 class="font-bold text-sm uppercase">Panels Maintenance</h4></div></div>
                     </div>
                 </div>
             </div>
