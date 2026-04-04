@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z&F Solar & Electrical | Solar & Electrical Solutions</title>
+    <title>Z&F Solar & Electrical | Solar Solutions Gauteng</title>
     
+    <meta name="description" content="Professional solar and electrical installations across Gauteng. Specializing in Deye hybrid systems, CoC certifications, and ROI-focused energy optimization.">
+    <meta name="keywords" content="Solar Gauteng, Solar Johannesburg, Solar Pretoria, Backup Power, Deye Inverter, Electrical CoC South Africa">
+    
+    <meta name="geo.region" content="ZA-GP" />
+    <meta name="geo.placename" content="Gauteng" />
+    <meta name="geo.position" content="-26.2041;28.0473" />
+    <meta name="ICBM" content="-26.2041, 28.0473" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Z&F Solar & Electrical",
+      "description": "Solar and Electrical specialists serving the Gauteng region.",
+      "areaServed": [
+        {"@type": "City", "name": "Johannesburg"},
+        {"@type": "City", "name": "Pretoria"},
+        {"@type": "City", "name": "Sandton"},
+        {"@type": "City", "name": "Centurion"}
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "telephone": "+27724803656",
+      "url": "https://zfsolar.co.za"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -31,10 +61,8 @@
 
         .watermark-layer {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
             z-index: 0; 
             pointer-events: none;
             overflow: hidden;
@@ -57,21 +85,17 @@
             font-size: 150px; 
             animation: float 20s infinite alternate ease-in-out;
         }
-        .icon-sun { top: 10%; left: 5%; animation-delay: 0s; }
-        .icon-panel { top: 70%; right: 15%; font-size: 200px; animation-delay: -5s; }
-        .icon-battery { top: 25%; left: 45%; font-size: 120px; animation-delay: -2s; }
-        .icon-inverter { bottom: 5%; left: 10%; font-size: 180px; animation-delay: -8s; }
+        .icon-sun { top: 10%; left: 5%; }
+        .icon-panel { top: 70%; right: 15%; font-size: 200px; }
+        .icon-battery { top: 25%; left: 45%; font-size: 120px; }
+        .icon-inverter { bottom: 5%; left: 10%; font-size: 180px; }
 
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); }
             100% { transform: translateY(30px) rotate(5deg); }
         }
 
-        .main-content {
-            position: relative;
-            z-index: 10;
-            background: transparent;
-        }
+        .main-content { position: relative; z-index: 10; background: transparent; }
 
         .glass { 
             background: rgba(255, 255, 255, 0.03); 
@@ -92,14 +116,12 @@
             .mobile-before-after {
                 overflow-x: scroll;
                 scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
             }
             .mobile-before-after img {
                 width: 200% !important;
                 max-width: none !important;
                 scroll-snap-align: start;
                 object-fit: contain !important;
-                transform: none !important;
             }
         }
 
@@ -110,15 +132,12 @@
         #wa-widget { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
         .wa-options { display: none; flex-direction: column; gap: 10px; margin-bottom: 5px; }
         .wa-contact { background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; font-weight: bold; font-size: 12px; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
-        .wa-contact:hover { transform: translateX(-5px); }
-        .wa-main { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 5px 15px rgba(0,0,0,0.4); cursor: pointer; transition: 0.3s; }
-        .wa-main:hover { transform: scale(1.1); }
+        .wa-main { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; cursor: pointer; transition: 0.3s; }
         #wa-widget:hover .wa-options { display: flex; }
 
         .nav-dropdown { position: relative; display: inline-block; }
-        .dropdown-content { display: none; position: absolute; background: rgba(11, 14, 17, 0.95); min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); margin-top: 10px; }
+        .dropdown-content { display: none; position: absolute; background: rgba(11, 14, 17, 0.95); min-width: 160px; z-index: 1; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); margin-top: 10px; }
         .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .dropdown-content a:hover { color: var(--volt-cyan); }
         .nav-dropdown:hover .dropdown-content { display: block; }
     </style>
 </head>
@@ -138,15 +157,15 @@
         <nav class="fixed w-full z-50 glass py-4">
             <div class="container mx-auto px-6 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-[var(--volt-blue)] rounded flex items-center justify-center text-white font-black text-xs">Z&F</div>
+                    <div class="w-10 h-10 bg-[var(--volt-blue)] rounded flex items-center justify-center text-white font-black">Z&F</div>
                     <span class="font-bold uppercase tracking-tighter italic text-sm md:text-base">Solar <span class="text-[var(--volt-cyan)]">&</span> Electrical</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest items-center">
+                <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest items-center">
                     <a href="#services" class="hover:text-[var(--volt-cyan)] transition">Expertise</a>
                     <a href="#gallery" class="hover:text-[var(--volt-cyan)] transition">Projects</a>
                     <a href="#calculator" class="hover:text-[var(--volt-cyan)] transition">ROI Sizing</a>
                     <div class="nav-dropdown">
-                        <button class="bg-[var(--volt-blue)] px-5 py-2 rounded text-white hover:bg-[var(--volt-cyan)] hover:text-black transition">Contact Us <i class="fas fa-chevron-down ml-2 text-[8px]"></i></button>
+                        <button class="bg-[var(--volt-blue)] px-6 py-3 rounded text-white hover:bg-[var(--volt-cyan)] hover:text-black transition">Contact Us <i class="fas fa-chevron-down ml-2 text-[10px]"></i></button>
                         <div class="dropdown-content">
                             <a href="https://wa.me/27724803656" target="_blank">Chat with Zaheer</a>
                             <a href="https://wa.me/27768560370" target="_blank">Chat with Farouk</a>
@@ -161,7 +180,7 @@
                 <h1 class="text-6xl md:text-9xl font-black uppercase italic leading-none mb-4">
                     <span class="text-[var(--volt-cyan)]">Solar</span>&<br>Electrical
                 </h1>
-                <p class="text-gray-500 uppercase tracking-[0.4em] text-xs md:text-sm mb-12">Johannesburg & Pretoria Electrical and Solar Energy Solutions</p>
+                <p class="text-gray-500 uppercase tracking-[0.4em] text-xs md:text-sm mb-12">Gauteng's Premier Solar & Electrical Solutions</p>
             </div>
         </section>
 
@@ -194,38 +213,36 @@
 
         <section id="gallery" class="py-24 bg-transparent">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col md:row justify-between items-end mb-16 gap-6">
-                    <div>
-                        <h2 class="text-4xl font-black uppercase italic mb-2">Project <span class="text-[var(--volt-cyan)]">Portfolio</span></h2>
-                        <p class="text-gray-500 text-[10px] uppercase tracking-widest font-bold">Real-world Hybrid & Backups</p>
-                    </div>
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-black uppercase italic mb-2">Project <span class="text-[var(--volt-cyan)]">Portfolio</span></h2>
+                    <p class="text-gray-500 text-[10px] uppercase tracking-[0.3em] font-bold">Real-world Hybrid & Backups</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="gallery-item">
-                        <img src="Project 1.jpg" alt="Deye Hybrid Installation">
+                        <img src="Project 1.jpg" alt="Deye Hybrid Installation Johannesburg Gauteng">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Install</p><h4 class="font-bold text-sm uppercase">Hybrid Backup</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="Project 2.jpg" alt="Solar Array">
+                        <img src="Project 2.jpg" alt="Solar Array Installation Pretoria Gauteng">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Solar</p><h4 class="font-bold text-sm uppercase">Panel Systems</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="Project 3.jpg" alt="Inverter Setup">
+                        <img src="Project 3.jpg" alt="Inverter Power Array Johannesburg North">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Power</p><h4 class="font-bold text-sm uppercase">Inverter Arrays</h4></div></div>
                     </div>
                     <div class="gallery-item">
-                        <img src="Project 4.jpg" alt="Electrical Work">
+                        <img src="Project 4.jpg" alt="Electrical System Integration Pretoria East">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Electrical</p><h4 class="font-bold text-sm uppercase">System Integration</h4></div></div>
                     </div>
 
                     <div class="gallery-item lg:col-span-3 mobile-before-after">
-                        <img src="Project 5.jpg" alt="DB Board Optimization">
+                        <img src="Project 5.jpg" alt="DB Board Upgrade and Solar Optimization Gauteng">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Optimization</p><h4 class="font-bold text-sm uppercase">DB Board Upgrade</h4></div></div>
                     </div>
                     
                     <div class="gallery-item">
-                        <img src="Project 6.jpg" alt="Solar Panel Cleaning">
+                        <img src="Project 6.jpg" alt="Professional Solar Panel Cleaning Johannesburg">
                         <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Maintenance</p><h4 class="font-bold text-sm uppercase">Panels Maintenance</h4></div></div>
                     </div>
                 </div>
@@ -271,9 +288,9 @@
             <div class="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-7xl font-black uppercase italic leading-none mb-8">Ready to<br>Switch?</h2>
-                    <p class="font-bold uppercase tracking-widest text-sm mb-12">Send your details to start the conversation so you can start saving</p>
+                    <p class="font-bold uppercase tracking-widest text-sm mb-12">Gauteng's premier experts in home energy savings</p>
                     <div class="flex flex-col gap-4">
-                        <a href="https://wa.me/27724803656" target="_blank" class="bg-[var(--volt-blue)] text-white px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:scale-105 shadow-xl shadow-blue-500/20 transition">Chat with Zaheer</a>
+                        <a href="https://wa.me/27724803656" target="_blank" class="bg-[var(--volt-blue)] text-white px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:scale-105 shadow-xl transition">Chat with Zaheer</a>
                         <a href="https://wa.me/27768560370" target="_blank" class="bg-[var(--volt-dark)] text-white px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-black transition">Chat with Farouk</a>
                     </div>
                 </div>
@@ -281,15 +298,15 @@
                     <form class="space-y-6">
                         <input type="text" id="fname" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] transition">
                         <input type="tel" id="fphone" placeholder="WhatsApp Number" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] transition">
-                        <textarea id="fnotes" placeholder="Tell us about your home/business power goals..." rows="3" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] resize-none transition"></textarea>
-                        <button type="button" onclick="sendLead()" class="w-full bg-[var(--volt-blue)] py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-black transition shadow-lg">Submit to Zaheer</button>
+                        <textarea id="fnotes" placeholder="Power goals in Gauteng region..." rows="3" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] resize-none transition"></textarea>
+                        <button type="button" onclick="sendLead()" class="w-full bg-[var(--volt-blue)] py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-black transition shadow-lg">Submit Request</button>
                     </form>
                 </div>
             </div>
         </section>
 
         <footer class="py-12 text-center text-gray-600 text-[9px] font-bold uppercase tracking-[0.5em]">
-            © 2026 Z&F SOLAR & ELECTRICAL SOLUTIONS | JHB | PTA
+            © 2026 Z&F SOLAR & ELECTRICAL SOLUTIONS | GAUTENG
         </footer>
     </div>
 
@@ -323,7 +340,7 @@
             const phone = document.getElementById('fphone').value;
             const notes = document.getElementById('fnotes').value;
             if(!name || !phone) { alert("Please provide contact details."); return; }
-            const msg = `*NEW SOLAR AUDIT*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
+            const msg = `*NEW GAUTENG SOLAR AUDIT*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Notes:* ${notes}`;
             window.open(`https://wa.me/27724803656?text=${msg}`, '_blank');
         }
         runSizing();
