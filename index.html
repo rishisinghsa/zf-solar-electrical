@@ -88,19 +88,18 @@
         }
         .gallery-item:hover .gallery-overlay { opacity: 1; }
 
-        /* SPECIAL MOBILE BEFORE/AFTER FIX FOR PROJECT 5 ONLY */
         @media (max-width: 768px) {
             .mobile-before-after {
-                overflow-x: scroll; /* Allow horizontal scrolling */
-                scroll-snap-type: x mandatory; /* Force snapping to edges */
-                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
             }
             .mobile-before-after img {
-                width: 200% !important; /* Make image 2x wider than screen */
+                width: 200% !important;
                 max-width: none !important;
-                scroll-snap-align: start; /* Snap to the start or end */
-                object-fit: contain !important; /* Keep proportions */
-                transform: none !important; /* Disable zoom effect */
+                scroll-snap-align: start;
+                object-fit: contain !important;
+                transform: none !important;
             }
         }
 
@@ -108,9 +107,19 @@
         input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 8px; background: #222; border-radius: 4px; }
         input[type=range]::-webkit-slider-thumb { height: 24px; width: 24px; border-radius: 50%; background: var(--volt-cyan); -webkit-appearance: none; margin-top: -8px; cursor: pointer; box-shadow: 0 0 15px rgba(0, 212, 255, 0.4); }
 
-        #wa-widget { position: fixed; bottom: 25px; right: 25px; z-index: 9999; }
+        #wa-widget { position: fixed; bottom: 25px; right: 25px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+        .wa-options { display: none; flex-direction: column; gap: 10px; margin-bottom: 5px; }
+        .wa-contact { background: #25d366; color: white; padding: 12px 20px; border-radius: 50px; font-weight: bold; font-size: 12px; display: flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .wa-contact:hover { transform: translateX(-5px); }
         .wa-main { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; color: white; box-shadow: 0 5px 15px rgba(0,0,0,0.4); cursor: pointer; transition: 0.3s; }
         .wa-main:hover { transform: scale(1.1); }
+        #wa-widget:hover .wa-options { display: flex; }
+
+        .nav-dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background: rgba(11, 14, 17, 0.95); min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); margin-top: 10px; }
+        .dropdown-content a { color: white; padding: 12px 16px; text-decoration: none; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .dropdown-content a:hover { color: var(--volt-cyan); }
+        .nav-dropdown:hover .dropdown-content { display: block; }
     </style>
 </head>
 <body>
@@ -129,14 +138,20 @@
         <nav class="fixed w-full z-50 glass py-4">
             <div class="container mx-auto px-6 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-[var(--volt-blue)] rounded flex items-center justify-center text-white font-black">ZF</div>
+                    <div class="w-10 h-10 bg-[var(--volt-blue)] rounded flex items-center justify-center text-white font-black text-xs">Z&F</div>
                     <span class="font-bold uppercase tracking-tighter italic text-sm md:text-base">Solar <span class="text-[var(--volt-cyan)]">&</span> Electrical</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
+                <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest items-center">
                     <a href="#services" class="hover:text-[var(--volt-cyan)] transition">Expertise</a>
                     <a href="#gallery" class="hover:text-[var(--volt-cyan)] transition">Projects</a>
                     <a href="#calculator" class="hover:text-[var(--volt-cyan)] transition">ROI Sizing</a>
-                    <a href="#contact" class="bg-[var(--volt-blue)] px-5 py-2 rounded text-white hover:bg-[var(--volt-cyan)] hover:text-black transition">Get Quote</a>
+                    <div class="nav-dropdown">
+                        <button class="bg-[var(--volt-blue)] px-5 py-2 rounded text-white hover:bg-[var(--volt-cyan)] hover:text-black transition">Contact Us <i class="fas fa-chevron-down ml-2 text-[8px]"></i></button>
+                        <div class="dropdown-content">
+                            <a href="https://wa.me/27724803656" target="_blank">Chat with Zaheer</a>
+                            <a href="https://wa.me/27768560370" target="_blank">Chat with Farouk</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -211,7 +226,7 @@
                     
                     <div class="gallery-item">
                         <img src="Project 6.jpg" alt="Solar Panel Cleaning">
-                        <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Maintenance & Cleaning</p><h4 class="font-bold text-sm uppercase">Panels Maintenance</h4></div></div>
+                        <div class="gallery-overlay"><div><p class="text-[var(--volt-cyan)] font-black text-xs uppercase">Maintenance</p><h4 class="font-bold text-sm uppercase">Panels Maintenance</h4></div></div>
                     </div>
                 </div>
             </div>
@@ -258,8 +273,8 @@
                     <h2 class="text-7xl font-black uppercase italic leading-none mb-8">Ready to<br>Switch?</h2>
                     <p class="font-bold uppercase tracking-widest text-sm mb-12">Send your details to start the conversation so you can start saving</p>
                     <div class="flex flex-col gap-4">
-                        <a href="#gallery" class="bg-[var(--volt-dark)] text-white border border-white/10 px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-black transition">View Our Work</a>
-                        <a href="#contact" class="bg-[var(--volt-blue)] text-white px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:scale-105 shadow-xl shadow-blue-500/20 transition">Book Site Visit</a>
+                        <a href="https://wa.me/27724803656" target="_blank" class="bg-[var(--volt-blue)] text-white px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:scale-105 shadow-xl shadow-blue-500/20 transition">Chat with Zaheer</a>
+                        <a href="https://wa.me/27768560370" target="_blank" class="bg-[var(--volt-dark)] text-white px-10 py-5 rounded-full text-center font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-black transition">Chat with Farouk</a>
                     </div>
                 </div>
                 <div class="bg-[var(--volt-dark)] p-10 md:p-12 rounded-[3rem] text-white shadow-2xl">
@@ -267,7 +282,7 @@
                         <input type="text" id="fname" placeholder="Full Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] transition">
                         <input type="tel" id="fphone" placeholder="WhatsApp Number" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] transition">
                         <textarea id="fnotes" placeholder="Tell us about your home/business power goals..." rows="3" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl outline-none focus:border-[var(--volt-cyan)] resize-none transition"></textarea>
-                        <button type="button" onclick="sendLead()" class="w-full bg-[var(--volt-blue)] py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-black transition shadow-lg">Submit via WhatsApp</button>
+                        <button type="button" onclick="sendLead()" class="w-full bg-[var(--volt-blue)] py-6 rounded-2xl font-black uppercase tracking-widest hover:bg-white hover:text-black transition shadow-lg">Submit to Zaheer</button>
                     </form>
                 </div>
             </div>
@@ -279,7 +294,11 @@
     </div>
 
     <div id="wa-widget">
-        <a href="https://wa.me/27724803656" target="_blank" class="wa-main"><i class="fab fa-whatsapp"></i></a>
+        <div class="wa-options">
+            <a href="https://wa.me/27724803656" target="_blank" class="wa-contact">Zaheer <i class="fab fa-whatsapp text-lg"></i></a>
+            <a href="https://wa.me/27768560370" target="_blank" class="wa-contact">Farouk <i class="fab fa-whatsapp text-lg"></i></a>
+        </div>
+        <div class="wa-main"><i class="fab fa-whatsapp"></i></div>
     </div>
 
     <script>
